@@ -1,5 +1,5 @@
 module "kube_secrets_backend" {
-  source   = "/Users/simon.elliott/Documents/Code/New_Structure/Terraform_Modules/Vault/terraform-vault-kubernetes-secret-backend"
+  source   = "git@github.com:sce81/terraform-vault-kubernetes-secrets-engine.git"
   for_each = toset(split(", ", var.namespaces))
 
   namespace          = each.value
